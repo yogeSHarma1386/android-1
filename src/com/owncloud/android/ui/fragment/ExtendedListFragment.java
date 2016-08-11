@@ -25,6 +25,7 @@ import android.support.annotation.DrawableRes;
 import android.support.annotation.StringRes;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.MenuItemCompat;
+import android.support.v4.view.ViewCompat;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.SearchView;
 import android.view.LayoutInflater;
@@ -176,11 +177,15 @@ public class ExtendedListFragment extends Fragment
 
         mListView = (ExtendedListView)(v.findViewById(R.id.list_root));
         mListView.setOnItemClickListener(this);
+        ViewCompat.setNestedScrollingEnabled(mListView,true);
+
+        //mListView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE_MODAL);
         mListFooterView = inflater.inflate(R.layout.list_footer, null, false);
 
         mGridView = (GridViewWithHeaderAndFooter) (v.findViewById(R.id.grid_root));
         mGridView.setNumColumns(GridView.AUTO_FIT);
         mGridView.setOnItemClickListener(this);
+        ViewCompat.setNestedScrollingEnabled(mGridView,true);
 
         mGridFooterView = inflater.inflate(R.layout.list_footer, null, false);
 
