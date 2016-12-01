@@ -99,7 +99,7 @@ public class FolderPickerActivity extends FileActivity implements FileFragment.C
         if (getIntent().getStringExtra(EXTRA_ACTION) != null) {
             caption = getIntent().getStringExtra(EXTRA_ACTION);
         } else {
-            caption = getString(R.string.default_display_name_for_root_folder);
+            caption = getString(R.string.server_name);
         };
         getSupportActionBar().setTitle(caption);
 
