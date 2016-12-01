@@ -63,7 +63,7 @@ public abstract class ToolbarActivity extends BaseActivity {
      * Updates title bar and home buttons (state and icon).
      */
     protected void updateActionBarTitleAndHomeButton(OCFile chosenFile) {
-        String title = getString(R.string.default_display_name_for_root_folder);    // default
+        String title = getString(R.string.server_name);    // default
         boolean inRoot;
 
         // choose the appropriate title

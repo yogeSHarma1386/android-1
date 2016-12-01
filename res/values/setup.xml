@@ -5,6 +5,7 @@
 
     <!-- App name  and other strings-->
     <string name="app_name">Nextcloud</string>
+    <string name="server_name">Nextcloud</string>
     <string name="account_type">nextcloud</string>	<!-- better if was a domain name; but changing it now would require migrate accounts when the app is updated -->
     <string name="authority">org.nextcloud</string>	<!-- better if was the app package with ".provider" appended ; it identifies the provider -->
     <string name="document_provider_authority">org.nextcloud.documents</string>
@@ -13,7 +14,6 @@
     <string name ="db_name">nextcloud</string>
     <string name ="data_folder">nextcloud</string>
     <string name ="log_name">nextcloud</string>
-    <string name ="default_display_name_for_root_folder">Nextcloud</string>
     <string name ="user_agent">Mozilla/5.0 (Android) ownCloud-android/%1$s</string>
     
     <!-- URLs and flags related -->
@@ -57,7 +57,7 @@
 
     <!-- Multiaccount support -->
     <bool name="multiaccount_support">true</bool>
-    
+
     <!-- Help, imprint and feedback -->
     <bool name="calendar_contacts_enabled">true</bool>
     <bool name="help_enabled">true</bool>

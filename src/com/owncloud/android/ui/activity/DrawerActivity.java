@@ -519,8 +519,13 @@ public abstract class DrawerActivity extends ToolbarActivity implements DisplayU
     protected void setAccountInDrawer(Account account) {
         if (mDrawerLayout != null && account != null) {
             TextView username = (TextView) findNavigationViewChildById(R.id.drawer_username);
+
             TextView usernameFull = (TextView) findNavigationViewChildById(R.id.drawer_username_full);
-            usernameFull.setText(account.name);
+            if (getResources().getBoolean(R.bool.show_server_url_input)) {
+                usernameFull.setText(account.name);
+            } else {
+                usernameFull.setText(getResources().getString(R.string.server_name));
+            }
             try {
                 OwnCloudAccount oca = new OwnCloudAccount(account, this);
                 username.setText(oca.getDisplayName());
